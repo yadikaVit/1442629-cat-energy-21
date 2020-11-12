@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Влада Афонина](https://up.htmlacademy.ru/adaptive/21/user/1442629).
-* Наставник: `Неизвестно`.
+* Наставник: Сергей Остаповец (https://htmlacademy.ru/profile/seraphim).
 
 ---
 
