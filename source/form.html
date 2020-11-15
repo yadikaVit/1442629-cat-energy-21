@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="page-form" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи - Подбор пограммы</title>
+  </head>
+  <body class="page-form__body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="#" width="" height="" alt="Логотип компании cat energy">
+      </a>
+      <a class="page-header__logo">
+        <img class="page-header__logo-name" src="#" width="" height="" alt="Логотип названия компании cat energy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-form-main">
+
+      <section class="program-form">
+        <div class="program-form__wrapper">
+          <h1 class="program-form__title">Подбор программы</h1>
+          <p class="program-form__slogan">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+          <form class="program-form__questionnaire questionnaire " action="https://echo.htmlacademy.ru" method="POST">
+            <fieldset class="questionnaire__fieldset">
+              <div class="questionnaire__list-wrapper">
+                <ul class="questionnaire__list">
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label" for="questionnaire-name">Имя:*</label>
+                    <input class="questionnaire__input" type="text" placeholder="Барсик" id="questionnaire-name" name="name" required>
+                  </li>
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label" for="questionnaire-weight">Вес (кг):*</label>
+                    <input class="questionnaire__input" type="number" id="questionnaire-weight" name="weight" value="7" required>
+                  </li>
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label" for="questionnaire-age">Возраст (лет):</label>
+                    <input class="questionnaire__input" type="number" id="questionnaire-age" name="age" value="7">
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--radio">
+              <div class="questionnaire__list-wrapper-radio">
+                <ul class="questionnaire__list questionnaire__list--radio">
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input-radio" type="radio" name="program-selection" value="slim" id="program-slim" checked>
+                    <label class="questionnaire__label questionnaire__label--radio" for="program-slim">Похудение</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input-radio" type="radio" name="program-selection" value="muscule" id="program-muscule">
+                    <label class="questionnaire__label questionnaire__label--radio" for="program-muscule">Набор массы</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input-radio" type="radio" name="program-selection" value="unknown" id="program-unknown">
+                    <label class="questionnaire__label questionnaire__label--radio" for="program-unknown">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--contact">
+              <div class="questionnaire__list-wrapper">
+                <h2 class="questionnaire__title">Контактные данные (владельца кота)</h2>
+                <ul class="questionnaire__list questionnaire__list--contact">
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label questionnaire__label--mail" for="questionnaire-email">E-mail:*</label>
+                    <input class="questionnaire__input questionnaire__input--mail" id="questionnaire-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  </li>
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label questionnaire__label--phone" for="questionnaire-phone">Телефон:*</label>
+                    <input class="questionnaire__input questionnaire__input--phone" type="tel" placeholder="8 (960) 900-60-90" id="questionnaire-phone" name="phone" required>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--comment">
+              <div class="questionnaire__list-wrapper">
+                <h2 class="questionnaire__title">Комментарий</h2>
+                <div class="questionnaire__textarea-wrapper">
+                  <textarea class="questionnaire__textarea" id="questionnaire-textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--checkbox">
+              <div class="questionnaire__list-wrapper">
+                <h2 class="questionnaire__title">Дополнительно</h2>
+                <ul class="questionnaire__list questionnaire__list--checkbox">
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--checkbox" type="checkbox" name="sweetener" id="checkbox-sweetener" checked>
+                    <label class="questionnaire__label questionnaire__label--checkbox" for="checkbox-sweetener">Сахарозаменитель</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--checkbox" type="checkbox" name="water" id="checkbox-water">
+                    <label class="questionnaire__label questionnaire__label--checkbox" for="checkbox-water">Питьевая вода</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--checkbox" type="checkbox" name="milk" id="checkbox-milk">
+                    <label class="questionnaire__label questionnaire__label--checkbox" for="checkbox-milk">Молоко</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--checkbox" type="checkbox" name="vitamins" id="checkbox-vitamins">
+                    <label class="questionnaire__label questionnaire__label--checkbox" for="checkbox-vitamins">Витамины</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <button class="programm__button programm__button--active" type="submit">отправить заявку</button>
+          </form>
+          <p>* — Обязательные поля</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+        <section class="page-footer__map map">
+          <div class="map__wrapper">
+            <h2 class="map__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <img class="map__image" src="#" width="" height="" alt="Офис компании Cat energy находится по адресу: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <img class="map__logo" src="#" width="" height="" alt="Пин в виде логотипа компании">
+          </div>
+        </section>
+
+        <section class="page-footer__fotter-bottom fotter-bottom">
+          <div class="fotter-bottom__wrapper">
+            <a class="fotter-bottom__logo page-header__logo">
+              <img class="page-header__logo-name" src="#" width="" height="" alt="Логотип названия компании cat energy">
+            </a>
+            <div class="page-footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__copyright copyright">
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <img class="copyright__logo" src="#" width="" height="" alt="Логотип компании, разработавшей сайт HTML Academy">
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
