@@ -5,14 +5,11 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="#" width="" height="" alt="Логотип компании cat energy">
+    <header class="header">
+      <a class="header__logo">
+        <img class="header__logo-image" src="#" width="" height="" alt="Логотип компании cat energy">
       </a>
-      <a class="page-header__logo">
-        <img class="page-header__logo-name" src="#" width="" height="" alt="Логотип названия компании cat energy">
-      </a>
-      <nav class="main-nav">
+      <nav class="header__main-nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -36,16 +33,18 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="main">
 
       <section class="program">
         <div class="program__wrapper">
             <h1 class="program__title">Функциональное питание для котов</h1>
-            <p class="program__slogan">
+            <p class="program__subtitle">
               Занялся собой? Займись котом!
             </p>
-            <img class="programm__image" src="#" width="" height="" alt="Стаканчик с питанием со скусом курицы">
-            <button class="programm__button programm__button--active" type="button">Подобрать программу</button>
+            <div class="programm__image-wrapper">
+              <img class="programm__image" src="#" width="" height="" alt="Стаканчик с питанием со скусом курицы">
+            </div>
+            <a class="programm__button" href="form.html">Подобрать программу</a>
         </div>
       </section>
 
@@ -70,22 +69,24 @@
       <section class="advantages">
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Как это работает</h2>
-          <div class="advantages__list-wrapper">
-            <ul class="advantages__list">
-              <li class="advantages__text advantages__text--vitamins">
-                Функциональное питание содержит только полезные питательные вещества.
-              </li>
-              <li class="advantages__text advantages__text--powder">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-              </li>
-              <li class="advantages__text advantages__text--replacement">
-                Замените один-два приема обычной еды на наше функциональное питание.
-              </li>
-              <li class="advantages__text advantages__text--improvements">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-              </li>
-            </ul>
-          </div>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <img class="advantages__image" src="#" width="" height="" alt="Полезные питательные вещества">
+              <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__image" src="#" width="" height="" alt="Порошок, залитый водой">
+              <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__image" src="#" width="" height="" alt="Столовые приборы">
+              <p class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__image" src="#" width="" height="" alt="Будильник">
+              <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -106,21 +107,24 @@
             </ul>
           </div>
           <p class="example__content">Затраты на питание: 15 000 руб.</p>
-          <div class="example__cat">
-            <img class="example__image example__image--fat" src="#" width="" height="" alt="Толстый кот">
-            <img class="example__image example__image-slim" src="#" width="" height="" alt="Худой кот">
-            <p class="example__range-mim">Было</p>
-            <input class="example__range" type="range" min="0" max="1" value="0" step="1">
-            <p class="example__range-max">Стало</p>
+          <div class="example__image">
+            <img class="example__image--fat" src="#" width="" height="" alt="Толстый кот">
+          </div>
+          <div class="example__image">
+            <img class="example__image--slim" src="#" width="" height="" alt="Худой кот">
+          </div>
+          <div class="example__range-wrapper">
+            <button class="example__range-button" type="button">Было</button>
+            <button class="example__range-button" type="button">Стало</button>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+    <footer class="footer">
+      <div class="footer__wrapper">
 
-        <section class="page-footer__map map">
+        <section class="footer__map map">
           <div class="map__wrapper">
             <h2 class="map__title">Приглашаем к сотрудничеству дилеров!</h2>
             <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -129,12 +133,12 @@
           </div>
         </section>
 
-        <section class="page-footer__fotter-bottom fotter-bottom">
+        <section class="footer__fotter-bottom fotter-bottom">
           <div class="fotter-bottom__wrapper">
-            <a class="fotter-bottom__logo page-header__logo">
-              <img class="page-header__logo-name" src="#" width="" height="" alt="Логотип названия компании cat energy">
+            <a class="fotter-bottom__logo">
+              <img class="fotter-bottom__logo-name" src="#" width="" height="" alt="Логотип названия компании cat energy">
             </a>
-            <div class="page-footer__social social">
+            <div class="fotter-bottom__social social">
               <ul class="social__list">
                 <li class="social__item">
                   <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
@@ -147,9 +151,11 @@
                 </li>
               </ul>
             </div>
-            <div class="page-footer__copyright copyright">
+            <div class="fotter-bottom__copyright copyright">
               <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-              <img class="copyright__logo" src="#" width="" height="" alt="Логотип компании, разработавшей сайт HTML Academy">
+              <a href="https://htmlacademy.ru/intensive/adaptive">
+                <img class="copyright__logo" src="#" width="" height="" alt="Логотип компании, разработавшей сайт HTML Academy">
+              </a>
             </div>
           </div>
         </section>
