@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: @mobile-width-only) {
+    flex-direction: column;
+  }
+}
+
+.header__logo {
+  text-align: center;
+  border-bottom: 1px solid @grey-border;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 102px;
+    border: none;
+  }
+}
+
+.header__logo img {
+  width: 101px;
+  height: 18px;
+  padding-top: 24px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 76px;
+  }
+}

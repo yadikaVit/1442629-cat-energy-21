@@ -1,0 +1,139 @@
+.example {
+  background-color: @grey-background;
+  margin-top: 45px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white-basic;
+    border-top: 1px solid @grey-border;
+    margin-top: 104px;
+  }
+}
+
+.example__wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 43px;
+  }
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px
+  }
+}
+
+.example__content {
+  font-size: 14px;
+  line-height: 18px;
+  color: @grey-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px
+  }
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @black-basic;
+  border: 1px solid #CDCDCD;
+  box-sizing: border-box;
+  border-radius: 3px;
+  min-height: 56px;
+  width: 124px;
+  padding-top: 15px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    min-height: 72px;
+    width: 162px;
+  }
+}
+
+.example__legend {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: @grey-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__list-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.example__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.example__range-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    background-color: @grey-background;
+  }
+
+}
+
+.example__range-button {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: inherit;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
