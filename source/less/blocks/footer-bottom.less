@@ -1,0 +1,19 @@
+.footer-bottom {
+  background-color: @grey-basic;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-bottom__logo {
+  margin-top: 39px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #D9D9D9;
+}

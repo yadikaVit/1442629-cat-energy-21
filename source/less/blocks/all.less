@@ -1,0 +1,94 @@
+.all {
+  display: block;
+  align-items: center;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @grey-basic;
+    box-sizing: border-box;
+    background-color: @white-basic;
+    padding-bottom: 0;
+    padding-top: 101px;
+  }
+}
+
+.all__title {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  text-align: center;
+  padding-top: 78px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 135px;
+    width: 30px;
+    height: 2px;
+    background-color: #D3D3D3;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 10px;
+      left: 50px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+
+
+.all__text {
+  display: block;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: @grey-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+}
+
+.all__button {
+  background-color: @grey-basic;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: @grey-dark;
+  height: 60px;
+  width: auto;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      height: 40px;
+  }
+}
