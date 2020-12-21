@@ -1,13 +1,43 @@
 .form-comment__title {
+  position: relative;
+  font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   margin-left: 20px;
 
+  &::after {
+    content: "";
+    border-bottom: 2px solid @green-basic;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    margin-left: 50px;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-left: 70px;
+
+    &::before {
+      content: "";
+      border-bottom: 2px solid @green-basic;
+      width: 50%;
+      position: absolute;
+      top: 20px;
+      margin-left: calc(-50% - 30px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
+
 
 .form-comment__textarea-wrapper {
   margin-right: 20px;
@@ -15,8 +45,15 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 76px;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-left: 70px;
+    margin-right: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 1220px;
+    margin-bottom: 67px;
   }
 }
 
@@ -24,4 +61,31 @@
   resize: none;
   min-height: 150px;
   width: 100%;
+  padding-left: 15px;
+  padding-top: 10px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    min-height: 174px;
+    border: 1px solid #e7e7e7;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+
+
+  &::placeholder {
+    font-size: 16px;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+    color: @grey-dark;
+    text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
 }
