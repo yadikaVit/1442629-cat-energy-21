@@ -78,7 +78,7 @@
   left: 30px;
   width: 35px;
   height: 49px;
-  background-image: url("/img/cat-slim.svg");
+  background-image: url("../img/cat-slim.svg");
 
   @media (min-width: @tablet-width) {
     top: 80px;
@@ -104,7 +104,7 @@
   left: 13px;
   width: 67px;
   height: 28px;
-  background-image: url("/img/cat-pro.svg");
+  background-image: url("../img/cat-pro.svg");
 
   @media (min-width: @tablet-width) {
     top: 130px;
@@ -199,6 +199,10 @@
   position: absolute;
   top: 0;
   left: -8px;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+  }
 }
 
 .programs-types__link:hover .programs-types__icon,
