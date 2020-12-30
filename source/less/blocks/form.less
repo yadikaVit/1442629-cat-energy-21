@@ -15,7 +15,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @grey-footer;
   padding-bottom: 24px;
   padding-top: 22px;
   box-sizing: border-box;
@@ -65,18 +65,35 @@
 }
 
 .form__input {
-  border: 1px solid #e7e7e7;
+  border: 1px solid @grey-form;
   box-sizing: border-box;
   height: 45px;
   width: 100%;
   padding-left: 16px;
+
+  &:hover {
+    border-color: @white-grey-border;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid @grey-dark;
+  }
+
+  &:invalid {
+    border: 2px solid @pink-error;
+  }
+
+  &:invalid:empty {
+    border: 1px solid @grey-form;
+  }
 
   @media (min-width: @tablet-width) {
     height: 52px;
   }
 
   &::placeholder {
-    font-family: "Oswald", "Arial", sans-serif;
+    font-family: @font-oswald;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;

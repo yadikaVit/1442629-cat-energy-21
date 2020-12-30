@@ -1,17 +1,25 @@
+.advantages {
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .advantages__title {
   font-size: 36px;
   line-height: 40px;
-  padding-left: 20px;
+  margin-left: 20px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding-left: 30px;
+    margin-left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
+    margin-left: 0;
+    margin-bottom: 72px;
   }
 }
 
@@ -38,8 +46,8 @@
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
     gap: 77px;
-    margin-right: 110px;
-    margin-left: 110px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -100,8 +108,12 @@
   }
 }
 
+.advantages__image use {
+  fill: @green-basic;
+}
+
 .advantages__text {
-  font-family: Arial;
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;

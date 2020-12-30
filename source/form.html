@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи - Подбор пограммы</title>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <link href="/css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
@@ -20,17 +19,17 @@
       <nav class="header__main-nav main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--form">
+          <li class="site-list__item">
             <a href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--form">
+          <li class="site-list__item">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item site-list__item--active site-list__item--form">
+          <li class="site-list__item site-list__item--active">
             <a>
               Подбор программы
             </a>
@@ -88,10 +87,16 @@
                 <li class="form-contact__item">
                   <label class="form-contact__label" for="form-email">E-&nbspmail:*</label>
                   <input class="form-contact__input" id="form-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="form-contact__icon form-contact__icon--email" width="20" height="15">
+                    <use xlink:href="/img/sprite.svg#icon-email"></use>
+                  </svg>
                 </li>
                 <li class="form-contact__item">
                   <label class="form-contact__label" for="form-phone">Телефон:*</label>
                   <input class="form-contact__input" type="tel" placeholder="8 (960) 900-60-90" id="form-phone" name="phone" required>
+                  <svg class="form-contact__icon form-contact__icon--phone" width="20" height="21">
+                    <use xlink:href="/img/sprite.svg#icon-phone"></use>
+                  </svg>
                 </li>
               </ul>
             </fieldset>
@@ -133,7 +138,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__contact contact contact--form">
+        <div class="footer__contact contact">
           <h2 class="contact__title">Приглашаем к&nbspсотрудничеству дилеров!</h2>
           <div class="contact__adress-wrapper">
             <p class="contact__adress">ул. Большая Конюшенная,&nbspд.&nbsp19/8</p>
@@ -155,46 +160,39 @@
           <div class="footer-bottom__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+                <a class="social__link social__link--vkontakte" href="#">
+                  <svg class="social__link-icon social__link-icon--vkontakte" width="23" height="16" alt="Мы в Вконтакте">
+                    <use xlink:href="/img/sprite.svg#icon_vkontakte"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+                <a class="social__link social__link--instagram" href="#">
+                  <svg class="social__link-icon social__link-icon--instagram" width="16" height="16" alt="Мы в Инстаграме">
+                    <use xlink:href="/img/sprite.svg#icon_instagram"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
-              </li>
-              <li class="social__item">
-                <svg class="social__item-icon">
-                  <use xlink:href="img/sprite.svg#htmlacademy"></use>
-                </svg>
+                <a class="social__link social__link--facebook" href="#">
+                  <svg class="social__link-icon social__link-icon--facebook" width="22" height="22" alt="Мы в Фейсбуке">
+                    <use xlink:href="/img/sprite.svg#icon_facebook"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
           <div class="footer-bottom__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-              <img src="#" width="" height="" alt="Логотип компании, разработавшей сайт HTML Academy">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="copyright__link-text">HTML Academy</p>
+              <svg class="copyright__link-logo" width="27" height="34" alt="Логотип HTML Academy">
+                <use xlink:href="/img/sprite.svg#html-logo"></use>
+              </svg>
             </a>
           </div>
         </section>
       </div>
     </footer>
-
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="/js/script.min.js"></script>
   </body>
 </html>

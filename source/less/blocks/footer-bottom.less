@@ -9,11 +9,28 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 
 .footer-bottom__logo {
   margin-top: 39px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @grey-footer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

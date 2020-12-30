@@ -1,4 +1,28 @@
-.copyright {
+.copyright__link {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover use,
+  &:focus use {
+    fill: @green-basic;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link-text {
+  font-family: @font-arial;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @grey-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }

@@ -26,10 +26,10 @@
     &::before {
       content: "";
       border-bottom: 2px solid @green-basic;
-      width: 50%;
+      width: 10%;
       position: absolute;
       top: 20px;
-      margin-left: calc(-50% - 30px);
+      margin-left: calc(-10% - 30px);
     }
   }
 
@@ -67,7 +67,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
-    border: 1px solid #e7e7e7;
+    border: 1px solid @grey-form;
   }
 
   @media (min-width: @desktop-width) {
@@ -77,7 +77,7 @@
 
   &::placeholder {
     font-size: 16px;
-    font-family: "Oswald", "Arial", sans-serif;
+    font-family: @font-oswald;
     line-height: 18px;
     font-weight: 400;
     color: @grey-dark;
