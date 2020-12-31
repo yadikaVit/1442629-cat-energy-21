@@ -7,6 +7,11 @@
     flex-direction: row;
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
@@ -19,13 +24,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 110px;
+    margin-left: 0;
   }
 }
 
 .header__logo img {
   padding-top: 24px;
   padding-bottom: 15px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 40px;

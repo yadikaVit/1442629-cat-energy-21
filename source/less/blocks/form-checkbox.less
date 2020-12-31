@@ -27,10 +27,10 @@
     &::before {
       content: "";
       border-bottom: 2px solid @green-basic;
-      width: 50%;
+      width: 10%;
       position: absolute;
       top: 20px;
-      margin-left: calc(-50% - 30px);
+      margin-left: calc(-10% - 30px);
     }
   }
 
@@ -91,7 +91,17 @@
   top: -5px;
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @white-grey-border;
+  box-sizing: content-box;
+
+  &:hover,
+  &:focus {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     left: 0;
@@ -111,6 +121,7 @@
   border-left: 1px solid @green-basic;
   border-bottom: 1px solid @green-basic;
   transform: rotate(-45deg);
+  box-sizing: content-box;
 
   @media (min-width: @tablet-width) {
     left: 12px;
@@ -118,4 +129,8 @@
     width: 20px;
     height: 12px;
   }
+}
+
+.form-checkbox__input:disabled + label {
+  opacity: 0.3;
 }

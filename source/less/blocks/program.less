@@ -1,12 +1,17 @@
 .program {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .program__wrapper {
   text-align: center;
   color: @white-basic;
   background-color: @green-basic;
-  background-image: url("/img/index-background-mobile1.jpg");
+  background-image: url("../img/index-background-mobile1.jpg");
   background-position: center;
   background-size: cover;
   min-height: 302px;
@@ -25,7 +30,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("/img/index-background-desktop1.jpg");
+    background-image: url("../img/index-background-desktop1.jpg");
     background-position: 100% 0%;
     background-size: 720px 694px;
     background-repeat: no-repeat;
@@ -90,11 +95,11 @@
     line-height: 20px;
     text-align: left;
     color: @black-basic;
-    padding-left: 117px;
+    margin-left: 117px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 190px;
+    margin-left: 190px;
   }
 }
 
@@ -111,6 +116,16 @@
   margin-right: 20px;
   margin-left: 20px;
   height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: @green-hover;
+  }
+
+  &:active {
+    color: @white-opasity;
+    background-color: @green-hover;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

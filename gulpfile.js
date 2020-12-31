@@ -13,6 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const svgSprite = require('gulp-svg-sprite');
 
 // Styles
 
@@ -22,10 +23,12 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso ()
     ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -79,9 +82,23 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(
+      svgSprite( {
+        mode: {
+          stack: {
+            prefix: ".icon-%s",
+            dimensions: "%s",
+            sprite: "../img/sprite.svg",
+            render: {
+              less: {
+                dest:"../../source/less/global/sprite.less"
+              }
+            }
+          }
+        }
+      })
+    )
+    .pipe(gulp.dest("build"));
 }
 
 exports.sprite = sprite;
@@ -114,7 +131,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -135,13 +152,10 @@ const reload = done => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 // Build
 

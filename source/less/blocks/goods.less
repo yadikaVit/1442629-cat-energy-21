@@ -11,24 +11,25 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 110px;
+    margin-left: 0;
+    margin-right: 80px;
+    flex-grow: 1;
   }
 }
 
 .goods__item {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid @white-grey-border;
   padding-bottom: 19px;
   padding-top: 12px;
 
   &:last-child {
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid @white-grey-border;
   }
 
   @media (min-width: @tablet-width) {
-    border: none;
-    border: 1px solid #cdcdcd;
+    border: 1px solid @white-grey-border;
     padding-right: 38px;
     padding-left: 38px;
     flex-direction: row;
@@ -38,42 +39,49 @@
 
   @media (min-width: @desktop-width) {
     border: none;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    border-top: 1px solid #cdcdcd;
+    border-top: 1px solid @white-grey-border;
+    padding-right: 0;
+    padding-left: 0;
 
     &:last-child {
-      border-bottom: 1px solid #cdcdcd;
+      border-bottom: 1px solid @white-grey-border;
     }
   }
 }
 
 .goods__meaning {
   margin-right: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.goods__price {
+  text-transform: uppercase;
 }
 
 .goods__title {
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
+  color: @grey-label;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
-
-  @media (min-width: @desktop-width) {
-    width: 320px;
-  }
 }
 
 .goods__data p {
-  font-family: Arial;
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  text-transform: uppercase;
   color: @grey-dark;
 
   @media (min-width: @tablet-width) {
@@ -85,6 +93,8 @@
 .goods__data {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @desktop-width) {
     width: 286px;
@@ -104,8 +114,18 @@
   height: 40px;
   width: 100%;
 
+  &:hover,
+  &:focus {
+    background-color: @green-hover;
+  }
+
+  &:active {
+    color: @white-opasity;
+    background-color: @green-hover;
+  }
+
   @media (min-width: @desktop-width) {
     width: 244px;
-    margin-left: 40px;
+    justify-self: end;
   }
 }
