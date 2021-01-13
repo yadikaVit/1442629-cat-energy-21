@@ -14,13 +14,13 @@
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img src="img/logo-mobile.svg" alt="Логотип компании cat energy">
+        <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип компании cat energy">
       </picture>
     </a>
     <nav class="header__main-nav main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active site-list__item--index site-list__item--index-active">
+        <li class="site-list__item site-list__item--index site-list__item--index-active">
           <a>
             Главная
           </a>
@@ -42,20 +42,22 @@
   <main class="main">
 
     <section class="program">
-      <div class="program__wrapper">
-        <h1 class="program__title">Функциональное<br>питание для котов</h1>
-        <p class="program__subtitle">
-          Занялся собой? Займись котом!
-        </p>
-        <div class="programm__image-wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop1.png 1x, img/index-can-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet-1.png 1x, img/index-can-tablet@2x.png 2x">
-            <img class="programm__image" src="img/index-can-mobile1.png" srcset="img/index-can-mobile@2x.png 2x"
-              alt="Стаканчик с питанием со скусом курицы">
-          </picture>
+      <div class="program__container">
+        <div class="program__wrapper">
+          <h1 class="program__title">Функциональное<br>питание для котов</h1>
+          <p class="program__subtitle">
+            Занялся собой? Займись котом!
+          </p>
+          <div class="programm__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop1.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet-1.png 1x, img/index-can-tablet@2x.png 2x">
+              <img class="programm__image" width="280" height="270" src="img/index-can-mobile1.png" srcset="img/index-can-mobile@2x.png 2x"
+                alt="Стаканчик с питанием со скусом курицы">
+            </picture>
+          </div>
         </div>
-        <a class="programm__button" href="form.html">Подобрать программу</a>
+          <a class="programm__button" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
@@ -77,7 +79,7 @@
         </li>
         <li class="programs-types__item programs-types__item--pro">
           <h3 class="programs-types__title">Набор массы</h3>
-          <p class="programs-types__description">Заработать авторитет среди дворовых котов и&nbspдаже собак? Серия Cat
+          <p class="programs-types__description programs-types__description--pro">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat
             Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs-types__link" href="#">
               <span class="programs-types__catalog">Каталог Pro</span>
@@ -96,7 +98,7 @@
       <ul class="advantages__list">
         <li class="advantages__item">
           <div class="advantages__image">
-            <svg  width="30" height="32" alt="Полезные питательные вещества">
+            <svg class="advantages__icon" width="30" height="32" alt="Полезные питательные вещества">
               <use xlink:href="/img/sprite.svg#icon_leaf"></use>
             </svg>
           </div>
@@ -131,53 +133,55 @@
 
     <section class="example">
       <h2 class="example__title">Живой пример</h2>
-      <div class="example__big-container">
-        <div class="example__medium-container">
-          <p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-            часов в день.</p>
-          <div class="example__list-wrapper">
-            <ul class="example__list">
-              <li class="example__items">
-                <p class="example__number">5 кг</p>
-                <p class="example__legend">Снижение веса</p>
-              </li>
-              <li class="example__items">
-                <p class="example__number">60 дней</p>
-                <p class="example__legend">Затрачено времени</p>
-              </li>
-            </ul>
-            <div class="example__total">
-              <p class="example__text">Затраты на питание: </p>
-              <p class="example__value">15 000 руб.</p>
+      <div class="example__wrapper">
+        <div class="example__big-container">
+          <div class="example__medium-container">
+            <p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+              часов в день.</p>
+            <div class="example__list-wrapper">
+              <ul class="example__list">
+                <li class="example__items">
+                  <p class="example__number">5 кг</p>
+                  <p class="example__legend">Снижение веса</p>
+                </li>
+                <li class="example__items">
+                  <p class="example__number">60 дней</p>
+                  <p class="example__legend">Затрачено времени</p>
+                </li>
+              </ul>
+              <div class="example__total">
+                <p class="example__text">Затраты на питание: </p>
+                <p class="example__value">15 000 руб.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="example__image-container">
-            <div class="example__image-wrapper">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop1.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet1.png 1x, img/before-tablet@2x.png 2x">
-                <img class="example__image" src="img/before-mobile1.png" srcset="img/before-mobile@2x.png 2x"
-                  alt="Толстый кот">
-              </picture>
+          <div>
+            <div class="example__image-container">
+              <div class="example__image-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop1.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet1.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__image example__image--before" width="309" height="232" src="img/before-mobile1.png" srcset="img/before-mobile@2x.png 2x"
+                    alt="Толстый кот">
+                </picture>
+              </div>
+              <div class="example__image-wrapper example__image-wrapper--slim">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop1.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet1.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__image example__image--after" width="251" height="240" src="img/after-mobile1.png" srcset="img/after-mobile@2x.png 2x"
+                    alt="Худой кот">
+                </picture>
+              </div>
             </div>
-            <div class="example__image-wrapper example__image-wrapper--slim">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/after-desktop1.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet1.png 1x, img/after-tablet@2x.png 2x">
-                <img class="example__image" src="img/after-mobile1.png" srcset="img/after-mobile@2x.png 2x"
-                  alt="Худой кот">
-              </picture>
+            <div class="example__range-wrapper">
+              <button class="example__range-button" type="button">Было</button>
+              <div class="example__scale">
+                <div class="example__bar"></div>
+              </div>
+              <button class="example__range-button" type="button">Стало</button>
             </div>
-          </div>
-          <div class="example__range-wrapper">
-            <button class="example__range-button" type="button">Было</button>
-            <div class="example__scale">
-              <div class="example__bar"></div>
-            </div>
-            <button class="example__range-button" type="button">Стало</button>
           </div>
         </div>
       </div>
@@ -187,9 +191,9 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__contact contact">
-        <h2 class="contact__title">Приглашаем к&nbspсотрудничеству дилеров!</h2>
+        <h2 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <div class="contact__adress-wrapper">
-          <p class="contact__adress">ул. Большая Конюшенная,&nbspд.&nbsp19/8</p>
+          <p class="contact__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</p>
           <p class="contact__adress contact__adress--city">Санкт-Петербург</p>
         </div>
       </div>
@@ -202,41 +206,43 @@
       </section>
 
       <section class="footer__footer-bottom footer-bottom">
-        <a class="footer-bottom__logo">
-          <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип названия компании cat energy">
-        </a>
-        <div class="footer-bottom__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">
-                <svg class="social__link-icon social__link-icon--vkontakte" width="23" height="16" alt="Мы в Вконтакте">
-                  <use xlink:href="/img/sprite.svg#icon_vkontakte"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">
-                <svg class="social__link-icon social__link-icon--instagram" width="16" height="16" alt="Мы в Инстаграме">
-                  <use xlink:href="/img/sprite.svg#icon_instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
-                <svg class="social__link-icon social__link-icon--facebook" width="22" height="22" alt="Мы в Фейсбуке">
-                  <use xlink:href="/img/sprite.svg#icon_facebook"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-bottom__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="copyright__link-text">HTML Academy</p>
-            <svg class="copyright__link-logo" width="27" height="34" alt="Логотип HTML Academy">
-              <use xlink:href="/img/sprite.svg#html-logo"></use>
-            </svg>
+        <div class="footer-bottom-wrapper">
+          <a class="footer-bottom__logo">
+            <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип названия компании cat energy">
           </a>
+          <div class="footer-bottom__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="#">
+                  <svg class="social__link-icon social__link-icon--vkontakte" width="23" height="16" alt="Мы в Вконтакте">
+                    <use xlink:href="/img/sprite.svg#icon_vkontakte"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="#">
+                  <svg class="social__link-icon social__link-icon--instagram" width="16" height="16" alt="Мы в Инстаграме">
+                    <use xlink:href="/img/sprite.svg#icon_instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="#">
+                  <svg class="social__link-icon social__link-icon--facebook" width="22" height="22" alt="Мы в Фейсбуке">
+                    <use xlink:href="/img/sprite.svg#icon_facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="copyright__link-text">HTML Academy</p>
+              <svg class="copyright__link-logo" width="27" height="34" alt="Логотип HTML Academy">
+                <use xlink:href="/img/sprite.svg#html-logo"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
     </div>

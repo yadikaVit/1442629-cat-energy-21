@@ -10,8 +10,7 @@
 
   @media (min-width: @desktop-width) {
     border: none;
-    max-width: 1440px;
-    margin: 0 auto;
+    margin-top: 126px;
   }
 }
 
@@ -28,6 +27,15 @@
     background-color: @grey-basic;
     justify-content: space-between;
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    background-image: linear-gradient(to right, @grey-basic 50%, @grey-background 50%);
   }
 }
 
@@ -45,7 +53,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 110px;
+    max-width: 1220px;
+    margin: 0 auto 76px auto;
   }
 }
 
@@ -346,6 +355,7 @@
 
 .example__image-wrapper {
   background-color: @grey-background;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     background-color: @grey-background;
@@ -373,5 +383,29 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     margin-top: -190px;
+  }
+}
+
+.example__image--before {
+  @media (min-width: @tablet-width) {
+    width: 354px;
+    height: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 405px;
+    height: 536px;
+  }
+}
+
+.example__image--after {
+  @media (min-width: @tablet-width) {
+    width: 354px;
+    height: 607px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 325px;
+    height: 654px;
   }
 }

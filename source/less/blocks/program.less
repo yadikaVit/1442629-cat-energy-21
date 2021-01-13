@@ -62,6 +62,18 @@
   }
 }
 
+.programm__image {
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
+}
+
 .program__title {
   font-size: 36px;
   font-weight: 400;
@@ -116,6 +128,8 @@
   margin-right: 20px;
   margin-left: 20px;
   height: 40px;
+  cursor: pointer;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -128,17 +142,19 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    margin: 0;
+    top: 290px;
+    left: 119px;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 29px;
-    margin-left: 117px;
     min-height: 54px;
     width: 244px;
     z-index: 20;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 190px;
-    margin-top: 52px;
+    top: 490px;
+    left: 190px;
   }
 }

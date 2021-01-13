@@ -1,3 +1,7 @@
+.questionnaire__wrapper-title {
+  .container-desktop;
+}
+
 .questionnaire__title {
   font-size: 36px;
   font-weight: 400;
@@ -44,8 +48,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
-    margin-bottom: 82px;
+    max-width: 1220px;
+    margin: 0 auto 82px;
   }
 }
 
@@ -57,7 +61,6 @@
   font-family: @font-oswald;
   font-weight: 400;
   text-decoration: none;
-  margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,8 +68,8 @@
   color: @white-basic;
   height: 40px;
   min-width: 280px;
-  margin-top: 41px;
-  margin-bottom: 21px;
+  margin: 41px auto 21px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
