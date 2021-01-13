@@ -10,7 +10,6 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 const svgSprite = require('gulp-svg-sprite');
