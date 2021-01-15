@@ -87,8 +87,8 @@
 }
 
 .form-contact__input {
-  outline: 1px solid @grey-form;
-  border: none;
+  border: 1px solid @grey-form;
+  outline: none;
   box-sizing: border-box;
   height: 45px;
   width: 100%;
@@ -101,26 +101,19 @@
   color: @grey-dark;
   cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   &:hover {
-    outline: 1px solid @white-grey-border;
+    border-color: @white-grey-border;
   }
 
   &:focus,
   &:active {
-    outline: 2px solid @grey-dark;
+    box-shadow: inset 0 0 0 1px @grey-dark;
+    border-color: @grey-dark;
   }
 
-  &:invalid {
-    outline: 2px solid @pink-error;
-  }
-
-  &:invalid:empty {
-    outline: 1px solid @grey-form;
+  &:focus:invalid {
+    border-color: @pink-error;
+    box-shadow: inset 0 0 0 1px @pink-error;
   }
 
   &::placeholder {
@@ -137,10 +130,23 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 100%;
     height: 52px;
   }
+}
+
+.form-contact__input:focus + .form-contact__icon use {
+  fill: @green-basic;
+}
+
+.form-contact__input:focus:invalid + .form-contact__icon use {
+  fill: @pink-error;
 }
 
 .form-contact__icon--email {
@@ -153,12 +159,4 @@
   position: absolute;
   top: 12px;
   right: 10px;
-}
-
-.form-contact__input:disabled + .form-contact__icon use {
-  fill: @green-basic;
-}
-
-.form-contact__input:invalid:empty + .form-contact__icon use {
-  fill: @pink-error;
 }

@@ -64,7 +64,6 @@
   }
 }
 
-
 .form-checkbox__input + label::before {
   content: "";
   position: absolute;
@@ -75,15 +74,6 @@
   border: 1px solid @white-grey-border;
   box-sizing: content-box;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    border-color: #bababa;
-  }
-
-  &:disabled {
-    opacity: 0.3;
-  }
 
   @media (min-width: @tablet-width) {
     left: 0;
@@ -113,6 +103,12 @@
   }
 }
 
-.form-checkbox__input:disabled + label {
+.form-checkbox__input:hover + label::before {
+  border: 1px solid @radio-hover;
+}
+
+.form-checkbox__input:disabled + label,
+.form-checkbox__input:disabled + label::before,
+.form-checkbox__input:disabled + label::after {
   opacity: 0.3;
 }
