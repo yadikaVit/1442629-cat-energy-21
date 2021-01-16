@@ -10,7 +10,6 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 const svgSprite = require('gulp-svg-sprite');
@@ -86,7 +85,6 @@ const sprite = () => {
       svgSprite( {
         mode: {
           stack: {
-            prefix: ".icon-%s",
             dimensions: "%s",
             sprite: "../img/sprite.svg",
             render: {
@@ -153,7 +151,7 @@ const reload = done => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 

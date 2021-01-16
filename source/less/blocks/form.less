@@ -1,10 +1,3 @@
-.form-main {
-  @media (min-width: @desktop-width) {
-    max-width: 1220px;
-    margin: 0 auto;
-  }
-}
-
 .form__fieldset {
   border: none;
   margin: 0;
@@ -66,10 +59,17 @@
 
 .form__input {
   border: 1px solid @grey-form;
-  box-sizing: border-box;
+  outline: none;
   height: 45px;
   width: 100%;
   padding-left: 16px;
+  font-family: @font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @grey-dark;
+  cursor: pointer;
 
   &:hover {
     border-color: @white-grey-border;
@@ -77,19 +77,19 @@
 
   &:focus,
   &:active {
-    border: 2px solid @grey-dark;
+    box-shadow: inset 0 0 0 1px @grey-dark;
+    border-color: @grey-dark;
   }
 
-  &:invalid {
-    border: 2px solid @pink-error;
-  }
-
-  &:invalid:empty {
-    border: 1px solid @grey-form;
+  &:focus:invalid {
+    border-color: @pink-error;
+    box-shadow: inset 0 0 0 1px @pink-error;
   }
 
   @media (min-width: @tablet-width) {
     height: 52px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &::placeholder {
@@ -108,6 +108,8 @@
 }
 
 .form__fieldset-wrapper {
+  .container-desktop;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
