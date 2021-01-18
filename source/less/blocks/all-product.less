@@ -10,20 +10,20 @@
     content: "";
     position: absolute;
     top: 30px;
-    left: 135px;
+    left: 45%;
     width: 30px;
     height: 2px;
     background-color: @white-background;
 
     @media (min-width: @tablet-width) {
       width: 60px;
-      left: 120px;
+      left: 130px;
       top: 80px;
     }
 
     @media (min-width: @desktop-width) {
-      top: 50px;
-      left: 80px;
+      top: 70px;
+      left: 90px;
     }
   }
 
@@ -51,6 +51,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    margin-top: 80px;
+    max-width: 134px;
   }
 }
 
@@ -68,6 +70,7 @@
     font-size: 16px;
     line-height: 18px;
     margin-top: auto;
+    max-width: 167px;
   }
 }
 
@@ -84,7 +87,7 @@
   text-transform: uppercase;
   color: @grey-dark;
   height: 60px;
-  width: 100%;
+  width: 279px;
 
   &:hover,
   &:focus {
@@ -100,5 +103,6 @@
     height: 40px;
     margin-bottom: 40px;
     margin-top: auto;
+    width: auto;
   }
 }
