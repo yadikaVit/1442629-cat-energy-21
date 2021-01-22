@@ -87,11 +87,6 @@ const sprite = () => {
           stack: {
             dimensions: "%s",
             sprite: "../img/sprite.svg",
-            render: {
-              less: {
-                dest:"../../source/less/global/sprite.less"
-              }
-            }
           }
         }
       })
