@@ -6,11 +6,6 @@
   text-decoration: none;
   cursor: pointer;
 
-  &:hover use,
-  &:focus use {
-    fill: @green-basic;
-  }
-
   &:active {
     opacity: 0.3;
   }
@@ -25,5 +20,22 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 22px;
+  }
+}
+
+.copyright__link-logo:hover use,
+.copyright__link-logo:active use {
+  fill: @green-basic;
+}
+
+.copyright__link-logo use {
+  fill: @grey-icon;
+}
+
+.copyright {
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
   }
 }

@@ -22,7 +22,7 @@
   flex-direction: column;
   border-top: 1px solid @white-grey-border;
   padding-bottom: 19px;
-  padding-top: 12px;
+  padding-top: 13px;
 
   &:last-child {
     border-bottom: 1px solid @white-grey-border;
@@ -32,6 +32,7 @@
     border: 1px solid @white-grey-border;
     padding-right: 38px;
     padding-left: 38px;
+    padding-bottom: 25px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,6 +46,8 @@
     border-top: 1px solid @white-grey-border;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 11px;
+    padding-bottom: 8px;
 
     &:last-child {
       border-bottom: 1px solid @white-grey-border;
@@ -69,11 +72,17 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @grey-label;
-  margin-bottom: 13px;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -98,13 +107,14 @@
 
   @media (min-width: @desktop-width) {
     width: 286px;
+    justify-self: self-end;
   }
 }
 
 .goods__button {
   background-color: @green-basic;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -124,8 +134,13 @@
     background-color: @green-hover;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-top: 8px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 244px;
     justify-self: end;
+    margin-top: 0;
   }
 }

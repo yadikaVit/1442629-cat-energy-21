@@ -4,17 +4,20 @@
   margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 65px;
-    margin-bottom: 62px;
+    margin-top: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 67px;
+    margin-top: 60px;
   }
 }
 
 .form-checkbox__title {
   .title;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
 }
 
 .form-checkbox__title-wrapper {
@@ -35,8 +38,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 42px;
-    justify-content: space-between;
-    margin-left: 70px;
+    grid-column-gap: 66px;
+    margin-left: 80px;
     margin-right: 67px;
     margin-bottom: 59px;
     margin-top: 62px;
@@ -45,6 +48,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+    grid-column-gap: 78px;
     max-width: 1220px;
     margin: 62px auto 66px;
   }
@@ -56,11 +60,16 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-left: 59px;
+  padding-left: 46px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 58px;
   }
 }
 
@@ -68,18 +77,22 @@
   content: "";
   position: absolute;
   left: 0;
-  top: -5px;
-  width: 30px;
-  height: 30px;
+  top: -6px;
+  width: 29px;
+  height: 29px;
   border: 1px solid @white-grey-border;
   box-sizing: content-box;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    left: 0;
-    top: -10px;
+    left: -14px;
+    top: -7px;
     width: 40px;
     height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -2px;
   }
 }
 
@@ -87,7 +100,7 @@
   content: "";
   position: absolute;
   top: 4px;
-  left: 9px;
+  left: 8px;
   width: 16px;
   height: 8px;
   border-left: 1px solid @green-basic;
@@ -96,10 +109,14 @@
   box-sizing: content-box;
 
   @media (min-width: @tablet-width) {
-    left: 12px;
-    top: 0;
-    width: 20px;
-    height: 12px;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 10px;
   }
 }
 
