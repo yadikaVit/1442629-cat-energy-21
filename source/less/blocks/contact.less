@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 28px;
-  padding-bottom: 22px;
+  padding-right: 23px;
+  padding-top: 26px;
+  padding-bottom: 28px;
   align-items: center;
 
   &--form {
@@ -16,19 +16,25 @@
     padding-left: 71px;
     padding-right: 71px;
     padding-top: 62px;
-    padding-bottom: 58px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     width: 570px;
     height: 201px;
-    top: 95px;
-    left: 110px;
+    top: 63px;
+    left: 0;
     z-index: 20;
-    padding: 0;
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-right: 48px;
     background-color: @white-basic;
     justify-content: space-around;
+
+    &--index {
+      top: 95px;
+    }
   }
 }
 
