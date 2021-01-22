@@ -13,6 +13,14 @@
 }
 
 .site-list__item {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @grey-border;
+
+    &:first-child {
+      border-top: 1px solid @grey-border;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 32px;
 
@@ -58,15 +66,14 @@
   text-transform: uppercase;
   color: var(--black-basic);
   text-decoration: none;
-  border-bottom: 1px solid @grey-border;
   text-align: center;
+
 
   @media (min-width: @tablet-width) {
     padding-top: 42px;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    border: none;
     padding-bottom: 10px;
   }
 
