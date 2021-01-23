@@ -3,18 +3,18 @@
   justify-content: space-between;
   flex-direction: column;
   border-bottom: 1px solid @grey-footer;
-  max-height: 66px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: center;
     border: none;
+    padding-top: 23px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 1220px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 0;
   }
 }
 
@@ -34,7 +34,7 @@
 
 .header__logo img {
   padding-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   cursor: pointer;
 
   &:hover,
@@ -47,7 +47,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
     width: 174px;
     padding: 0;
   }
